@@ -22,6 +22,7 @@ public class Fibonacci {
     }
 
     // более эффективный способ
+
     private static long fibEffective(int n) {
         long[] arr = new long[n + 1];
         arr[0] = 0;
@@ -40,3 +41,4 @@ public class Fibonacci {
         return result;
     }
 }
+
