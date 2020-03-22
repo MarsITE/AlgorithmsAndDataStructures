@@ -16,13 +16,14 @@ public class Fibonacci {
     }
 
     // наивный, медленный и очевидный алгоритм - n=100 будет вычислять 50_000 лет
+    // O(2^n)
     private static long fibNaive(int n) {
         if (n <= 1) return n;
         return fibNaive(n - 1) + fibNaive(n - 2);
     }
 
     // более эффективный способ
-
+    // O(n)
     private static long fibEffective(int n) {
         long[] arr = new long[n + 1];
         arr[0] = 0;
@@ -33,6 +34,7 @@ public class Fibonacci {
     }
 
     // мемоизация
+    // O(n)
     private static long fibMem(int n, long[] mem) {
         if (mem[n] != -1) return mem[n];
         if (n <= 1) return n;
